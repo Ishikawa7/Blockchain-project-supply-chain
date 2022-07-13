@@ -1,0 +1,388 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract Apicoltore",
+						"name": "_apicoltore_originario",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_fioritura",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "giorno",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "mese",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "anno",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Utility.Data",
+						"name": "_data_produzione",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "nazione",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "citta",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Utility.Indicazioni_geografiche",
+						"name": "_luogo_produzione",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_codice_lotto",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "messaggio",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "codice_lotto",
+						"type": "uint256"
+					}
+				],
+				"name": "Comprato",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "messaggio",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "codice_lotto",
+						"type": "uint256"
+					}
+				],
+				"name": "In_vendita",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "messaggio",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "codice_lotto",
+						"type": "uint256"
+					}
+				],
+				"name": "In_vendita_per_consumatore_finale",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "messaggio",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "codice_lotto",
+						"type": "uint256"
+					}
+				],
+				"name": "Prodotto_da_apicoltore",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "address_proprietario_corrente",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "apicoltore_originario",
+				"outputs": [
+					{
+						"internalType": "contract Apicoltore",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "codice_lotto",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "data_produzione",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "giorno",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "mese",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "anno",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fioritura",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address_nuovo_proprietario",
+						"type": "address"
+					}
+				],
+				"name": "imposta_acquistato",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "vecchio_proprietario",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "luogo_produzione",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "nazione",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "citta",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "address_proprietario",
+						"type": "address"
+					}
+				],
+				"name": "messa_in_vendita_finale",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_prezzo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "address_proprietario",
+						"type": "address"
+					}
+				],
+				"name": "metti_in_vendita",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "prezzo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "stato",
+				"outputs": [
+					{
+						"internalType": "enum Lotto.Stato_lotto",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "stato_lotto",
+				"outputs": [
+					{
+						"internalType": "enum Lotto.Stato_lotto",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Lotto.sol": "Lotto"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Apicoltore.sol": {
+			"keccak256": "0xbd86d340f7c6d39ed8f6cd73109c045aec8c3e3520fb73624a009366727b321f",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://61d7374a4f432093cb3f8d02ea8170bb09c85da2709200c40612f69941603728",
+				"dweb:/ipfs/QmWzxgcPo987hji4HVmTUWTNQfdZEVVf3SzdBUZyQBqoCj"
+			]
+		},
+		"contracts/Attore.sol": {
+			"keccak256": "0xb7db51aba21c64b486cf04d4df6990de08bd482c2dea74451b4c1cd765abf1b7",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://1bcea3204d5018886f94201473121d8a6da61404c3d1da5edfe884438d423e4f",
+				"dweb:/ipfs/QmNoNmh5qmZY7DZMrtF6ZoGmtiErQbXAFyXJqi3YvZboc8"
+			]
+		},
+		"contracts/Lotto.sol": {
+			"keccak256": "0xa7f8975fb2438b71aaee98ee75088f202980bb70216346d040757eaa108f1ca3",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://b5e1e7d0fef596ec3255699d181dc430cb4e52f9e22b1f36a7c21f157a6eed82",
+				"dweb:/ipfs/QmVcbSYWj6S5ywUVoUArgPKVwiBSt4zfv4LPeE4BBPYXeK"
+			]
+		},
+		"contracts/Utility.sol": {
+			"keccak256": "0xefd73e6f43e0b2c12cd3976ef13cd9b62c5264ac2bbc4761ff264ac843db2eae",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://3c4c853522422a88e4fff162557936e677a8437da7d939d1421ecf30357b3cdd",
+				"dweb:/ipfs/Qmb5h1k9NupRxdgjNjduHCgqNvtijFkdV9c4MFFfumfLvq"
+			]
+		}
+	},
+	"version": 1
+}

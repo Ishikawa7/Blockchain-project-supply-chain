@@ -1,0 +1,211 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nome",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_indirizzo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_informazioni",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "address_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "indirizzo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "informazioni",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nome",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_fioritura",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "giorno",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "mese",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "anno",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Utility.Data",
+						"name": "_data_produzione",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "nazione",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "citta",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Utility.Indicazioni_geografiche",
+						"name": "_luogo_produzione",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_codice_lotto",
+						"type": "uint256"
+					}
+				],
+				"name": "produci_lotto_miele",
+				"outputs": [
+					{
+						"internalType": "contract Lotto",
+						"name": "lotto_prodotto",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Apicoltore.sol": "Apicoltore"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Apicoltore.sol": {
+			"keccak256": "0x57d12679af5965c743e95908fb298d13eb9c8d7c0573e5245f8680255ac7bd25",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://4e4d5e5af4d24411c274b56c6a325abb07969fa4d2769c0282cdf1291a4febc2",
+				"dweb:/ipfs/QmP3PynWy6EeCdetVxrWbh51sVteQzFrkNC7TaX563qcHu"
+			]
+		},
+		"contracts/Attore.sol": {
+			"keccak256": "0x478f2539ffdc573acae58e3bbbeb7f359549202f77ce2736d286da68f5d26de5",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://0d49c19238417edd0c264a77e64359781751d185596b16de430967ad4c18dd24",
+				"dweb:/ipfs/QmRkH7nEM7fyKZmj7i2RND7zainZeMPe8TZ3CbhXCSnry7"
+			]
+		},
+		"contracts/Lotto.sol": {
+			"keccak256": "0xa7f8975fb2438b71aaee98ee75088f202980bb70216346d040757eaa108f1ca3",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://b5e1e7d0fef596ec3255699d181dc430cb4e52f9e22b1f36a7c21f157a6eed82",
+				"dweb:/ipfs/QmVcbSYWj6S5ywUVoUArgPKVwiBSt4zfv4LPeE4BBPYXeK"
+			]
+		},
+		"contracts/Utility.sol": {
+			"keccak256": "0xefd73e6f43e0b2c12cd3976ef13cd9b62c5264ac2bbc4761ff264ac843db2eae",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://3c4c853522422a88e4fff162557936e677a8437da7d939d1421ecf30357b3cdd",
+				"dweb:/ipfs/Qmb5h1k9NupRxdgjNjduHCgqNvtijFkdV9c4MFFfumfLvq"
+			]
+		}
+	},
+	"version": 1
+}
